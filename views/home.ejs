@@ -1,0 +1,36 @@
+    
+<%- include("header") -%>
+
+
+<form action="/" method="post">  
+
+<div class="row btnDIv">
+
+
+    <!-- loop items size time ,and evrey iteration create new button list with name of the items arrays -->
+    <% for(var i =0; i<Object.keys(items).length;i++){ %>
+            
+        <div class="col-lg-3 col-md-6">
+            <button type="submit" name="buttonName" value="<%=Object.keys(items)[i]%>" class="btnList" > <%=Object.keys(items)[i]%> List</button>
+        </div>
+
+    <% } %>
+
+
+    
+    <div class="floating-button">
+    <input type="text" name="inputAddList" placeholder="List Name (one word)">
+    <button class="floating-button" type="submit" name="buttonAddList" >add list</button>
+</div>
+
+</div>
+
+</form> 
+
+
+
+
+
+
+
+<%- include("end") -%>
